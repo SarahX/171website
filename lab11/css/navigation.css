@@ -1,0 +1,29 @@
+.menu ul {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding-left: 0;
+	list-style-type: none;
+}
+
+.menu li {
+	font-style: normal;
+}
+
+.menu a {
+ 	padding: 10px;
+  	text-decoration: none;
+  	color: #BF40BF;
+  	display: block;
+}
+
+.menu a:hover {
+	color: #1afba7;
+	background-color: #6d706f;
+}
+
+.menu a.is-current {
+	color: #1afba7;
+	background-color: #282828; 
+}
+
