@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+
+   <head>
+      <meta charset="utf-8">
+      <link rel="stylesheet" href="css/styles.css">
+      <link rel="stylesheet" href="css/navigation.css">
+      <title>Lab 08 - Programming language</title>
+   </head>
+
+   <body>
+
+      <div class="container">
+
+         <header>
+            <h1>Programming Languages</h1>
+            <div class="intro">Learn about prog lang theory and use cases.</div>
+         </header>
+
+         <nav class="menu">
+            <ul>
+               <li><a href="definitions.html">Definitions</a></li>
+               <li><a href="history.html">History</a></li>
+               <li><a href="elements.html" class="is-current">Elements</a></li>
+               <li><a href="design.html">Design</a></li>
+            </ul>
+         </nav>
+
+         <article>
+
+            <figure>
+               <img src="images/python.png" alt="Parse tree of Python">
+               <figcaption>The parse tree of Python code with inset tokenization</figcaption>
+            </figure>
+
+            <h2>Elements</h2>
+
+            <h3>Type System</h3>
+            <p>A type system defines how a programming language classifies values and expressions into types, how it can manipulate those types and how they interact. The goal of a type system is to verify and usually enforce a certain level of correctness in programs written in that language by detecting certain incorrect operations. Any decidable type system involves a trade-off: while it rejects many incorrect programs, it can also prohibit some correct, albeit unusual programs. In order to bypass this downside, a number of languages have type loopholes, usually unchecked casts that may be used by the programmer to explicitly allow a normally disallowed operation between different types. In most typed languages, the type system is used only to type check programs, but a number of languages, usually functional ones, infer types, relieving the programmer from the need to write type annotations. The formal design and study of type systems is known as type theory.</p>
+
+            <p>A language is typed if the specification of every operation defines types of data to which the operation is applicable. For example, the data represented by "this text between the quotes" is a string, and in many programming languages dividing a number by a string has no meaning and will not be executed. The invalid operation may be detected when the program is compiled ("static" type checking) and will be rejected by the compiler with a compilation error message, or it may be detected while the program is running ("dynamic" type checking), resulting in a run-time exception. Many languages allow a function called an exception handler to handle this exception and, for example, always return "-1" as the result. A special case of typed languages are the single-typed languages. These are often scripting or markup languages, such as REXX or SGML, and have only one data type–—most commonly character strings which are used for both symbolic and numeric data. In contrast, an untyped language, such as most assembly languages, allows any operation to be performed on any data, generally sequences of bits of various lengths. High-level untyped languages include BCPL, Tcl, and some varieties of Forth. In practice, while few languages are considered typed from the type theory (verifying or rejecting all operations), most modern languages offer a degree of typing. Many production languages provide means to bypass or subvert the type system, trading type-safety for finer control over the program's execution (such as casting).</p>
+            <p>In static typing, all expressions have their types determined prior to when the program is executed, typically at compile-time. For example, 1 and (2+2) are integer expressions; they cannot be passed to a function that expects a string, or stored in a variable that is defined to hold dates. Statically typed languages can be either manifestly typed or type-inferred. In the first case, the programmer must explicitly write types at certain textual positions (for example, at variable declarations). In the second case, the compiler infers the types of expressions and declarations based on context. Most mainstream statically typed languages, such as C++, C# and Java, are manifestly typed. Complete type inference has traditionally been associated with less mainstream languages, such as Haskell and ML. However, many manifestly typed languages support partial type inference; for example, C++, Java and C# all infer types in certain limited cases. Additionally, some programming languages allow for some types to be automatically converted to other types; for example, an int can be used where the program expects a float. Dynamic typing, also called latent typing, determines the type-safety of operations at run time; in other words, types are associated with run-time values rather than textual expressions. As with type-inferred languages, dynamically typed languages do not require the programmer to write explicit type annotations on expressions. Among other things, this may permit a single variable to refer to values of different types at different points in the program execution. However, type errors cannot be automatically detected until a piece of code is actually executed, potentially making debugging more difficult. Lisp, Smalltalk, Perl, Python, JavaScript, and Ruby are all examples of dynamically typed languages.</p>
+            <p>Weak typing allows a value of one type to be treated as another, for example treating a string as a number. This can occasionally be useful, but it can also allow some kinds of program faults to go undetected at compile time and even at run time. Strong typing prevents these program faults. An attempt to perform an operation on the wrong type of value raises an error. Strongly typed languages are often termed type-safe or safe. An alternative definition for "weakly typed" refers to languages, such as Perl and JavaScript, which permit a large number of implicit type conversions. In JavaScript, for example, the expression 2 * x implicitly converts x to a number, and this conversion succeeds even if x is null, undefined, an Array, or a string of letters. Such implicit conversions are often useful, but they can mask programming errors. Strong and static are now generally considered orthogonal concepts, but usage in the literature differs. Some use the term strongly typed to mean strongly, statically typed, or, even more confusingly, to mean simply statically typed. Thus C has been called both strongly typed and weakly, statically typed. It may seem odd to some professional programmers that C could be "weakly, statically typed". However, notice that the use of the generic pointer, the void* pointer, does allow for casting of pointers to other pointers without needing to do an explicit cast. This is extremely similar to somehow casting an array of bytes to any kind of datatype in C without using an explicit cast, such as (int) or (char).</p>
+
+            <p>Most programming languages have an associated core library (sometimes known as the 'standard library', especially if it is included as part of the published language standard), which is conventionally made available by all implementations of the language. Core libraries typically include definitions for commonly used algorithms, data structures, and mechanisms for input and output. The line between a language and its core library differs from language to language. In some cases, the language designers may treat the library as a separate entity from the language. However, a language's core library is often treated as part of the language by its users, and some language specifications even require that this library be made available in all implementations. Indeed, some languages are designed so that the meanings of certain syntactic constructs cannot even be described without referring to the core library. For example, in Java, a string literal is defined as an instance of the java.lang.String class; similarly, in Smalltalk, an anonymous function expression (a "block") constructs an instance of the library's BlockContext class. Conversely, Scheme contains multiple coherent subsets that suffice to construct the rest of the language as library macros, and so the language designers do not even bother to say which portions of the language must be implemented as language constructs, and which must be implemented as parts of a library.</p>
+
+         </article>
+
+         <aside>
+
+            <p>All programming languages have some primitive building blocks for the description of data and the processes or transformations applied to them (like the addition of two numbers or the selection of an item from a collection). These primitives are defined by syntactic and semantic rules which describe their structure and meaning respectively.</p>
+
+            <h3>Syntax</h3>
+            <p>A programming language's surface form is known as its syntax. Most programming languages are purely textual; they use sequences of text including words, numbers, and punctuation, much like written natural languages. On the other hand, there are some programming languages which are more graphical in nature, using visual relationships between symbols to specify a program. The syntax of a language describes the possible combinations of symbols that form a syntactically correct program. The meaning given to a combination of symbols is handled by semantics (either formal or hard-coded in a reference implementation). Since most languages are textual, this article discusses textual syntax. 
+
+            <p>Not all syntactically correct programs are semantically correct. Many syntactically correct programs are nonetheless ill-formed, per the language's rules; and may (depending on the language specification and the soundness of the implementation) result in an error on translation or execution. In some cases, such programs may exhibit undefined behavior. Even when a program is well-defined within a language, it may still have a meaning that is not intended by the person who wrote it.</p>
+
+            <h3>Semantics</h3>
+            <p>The static semantics defines restrictions on the structure of valid texts that are hard or impossible to express in standard syntactic formalisms. For compiled languages, static semantics essentially include those semantic rules that can be checked at compile time. Examples include checking that every identifier is declared before it is used (in languages that require such declarations) or that the labels on the arms of a case statement are distinct. Many important restrictions of this type, like checking that identifiers are used in the appropriate context (e.g. not adding an integer to a function name), or that subroutine calls have the appropriate number and type of arguments, can be enforced by defining them as rules in a logic called a type system. Other forms of static analyses like data flow analysis may also be part of static semantics. Newer programming languages like Java and C# have definite assignment analysis, a form of data flow analysis, as part of their static semantics.</p>
+
+            <p>Once data has been specified, the machine must be instructed to perform operations on the data. For example, the semantics may define the strategy by which expressions are evaluated to values, or the manner in which control structures conditionally execute statements. The dynamic semantics (also known as execution semantics) of a language defines how and when the various constructs of a language should produce a program behavior. There are many ways of defining execution semantics. Natural language is often used to specify the execution semantics of languages commonly used in practice. A significant amount of academic research went into formal semantics of programming languages, which allow execution semantics to be specified in a formal manner. Results from this field of research have seen limited application to programming language design and implementation outside academia.</p>
+
+         </aside>
+         
+      </div>
+
+   </body>
+
+</html>
+
+
+
+
